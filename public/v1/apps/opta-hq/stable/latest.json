@@ -1,0 +1,11 @@
+{
+  "version": "0.2.0",
+  "notes": "Opta HQ becomes self-updating: signed, notarized, with silent background updates and a quiet restart pill. Plus the loadout-driven sidebar (Atlas substrate) and Brain round 2.",
+  "pub_date": "2026-06-11T08:15:32Z",
+  "platforms": {
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSR2NlU3JLc3BOWDVWNDE4MnNra0xHQVQ0Sm1jSitHczBHM3NQOTFLV3RMSUtPZkJ6ekpkdEF6cXhBSXArUWdTZTNHR1VjVERISW9TM2EzOE9sUjc2cjRkaXM4WXlEQWdjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxMTY1NjE3CWZpbGU6T3B0YSBIUS5hcHAudGFyLmd6ClkrVkFvKzR5OEp1K1VjUU5UckN3SU93a0dGSENSZ0toVUhmNUM0cGc0eEdOREVxcktEVVV6YXAyUm9DUHBzMjI5dlRFWnozdVgxRFhZc3dkMEJkdURRPT0K",
+      "url": "https://github.com/Optamize/opta-releases/releases/download/opta-hq-v0.2.0/Opta-HQ-0.2.0-aarch64.app.tar.gz"
+    }
+  }
+}

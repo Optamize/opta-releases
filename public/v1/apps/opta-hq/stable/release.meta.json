@@ -1,0 +1,21 @@
+{
+  "schema": "opta.release-meta/1",
+  "app": "opta-hq",
+  "version": "0.2.0",
+  "channel": "stable",
+  "class": "feature",
+  "urgent": false,
+  "pubDate": "2026-06-11T08:30:00Z",
+  "title": "Opta HQ becomes self-updating",
+  "highlights": [
+    { "text": "Signed & notarized — HQ is now a Developer-ID app with hardened runtime" },
+    { "text": "The Opta Update System arrives: silent background updates with a quiet 'Restart to update' pill — never a forced restart" },
+    { "text": "Loadout-driven sidebar (Atlas substrate): foundational pins + your installed modules, replacing the two-tier nav" },
+    { "text": "Brain round 2: zen mode, resizable rail, region rails, People cards" }
+  ],
+  "notesMarkdown": "First release shipped through the Opta Update System. From this version forward, HQ updates itself: hotfixes install silently and wait for your next restart; feature releases like this one announce themselves properly.",
+  "modules": [
+    { "id": "brain", "change": "updated", "summary": "Zen mode · rail resize · region rails · People cards" }
+  ],
+  "minimumVersion": null
+}

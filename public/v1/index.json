@@ -1,4 +1,11 @@
 {
   "schema": "opta.fleet-index/1",
-  "apps": {}
+  "apps": {
+    "opta-hq": {
+      "channels": {
+        "stable": "0.2.0"
+      },
+      "updated": "2026-06-11T08:15:32Z"
+    }
+  }
 }
