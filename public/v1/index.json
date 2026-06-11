@@ -3,9 +3,9 @@
   "apps": {
     "opta-hq": {
       "channels": {
-        "stable": "0.2.0"
+        "stable": "0.2.1"
       },
-      "updated": "2026-06-11T08:15:32Z"
+      "updated": "2026-06-11T08:38:14Z"
     }
   }
 }
