@@ -1,18 +1,21 @@
 {
   "schema": "opta.release-meta/1",
   "app": "opta-hq",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "channel": "beta",
   "class": "hotfix",
   "urgent": false,
-  "pubDate": "2026-06-11T08:38:14Z",
-  "title": "OTA loop proof",
+  "pubDate": "2026-06-12T18:53:42Z",
+  "title": "Your keyboard back \u2014 and a live content plane",
   "highlights": [
     {
-      "text": "First over-the-air update in Opta history \u2014 the loop is live"
+      "text": "Hotkeys are app-scoped now \u2014 the system-wide \u2318T/\u2318K/\u2318M/\u2318, grab is gone; browsers get Cmd+T back"
+    },
+    {
+      "text": "Pulse lands: signed Atlas catalogue + fleet kill-switches, verified end-to-end"
     }
   ],
-  "notesMarkdown": "Hotfix-class release proving the update pipeline end-to-end.",
+  "notesMarkdown": "Removes the OS-global hotkey registration (tauri-plugin-global-shortcut) that stole \u2318T/\u2318K/\u2318M/\u2318, from every other app while HQ ran. Ships the U2 Pulse client: signed content snapshots, the Atlas catalogue feed, and remote kill-switches.",
   "modules": [],
   "minimumVersion": null
 }
