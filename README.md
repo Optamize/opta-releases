@@ -1,3 +1,18 @@
+---
+id: nexus.readme.repos.opta-releases.readme
+title: Opta Releases
+domain: ops
+status: reference
+audience:
+- shared
+source_type: index
+owner: shared
+updated: '2026-06-11'
+confidence: medium
+retrieval_tags:
+- readme
+privacy: internal
+---
 # Opta Releases
 
 Signed release artifacts and update manifests for the Opta Stack desktop fleet
@@ -12,7 +27,7 @@ Signed release artifacts and update manifests for the Opta Stack desktop fleet
 - `history/` is the immutable archive of every manifest ever published. `latest.json` is the only
   mutable file; git history is the audit log.
 - `public/v1/feeds/` is reserved for the content plane (Atlas catalogue, status, Learn — U2).
-- All artifacts are minisign-signed (fleet key `235BA81E06B7EAFA`) and macOS bundles are
+- All artifacts are minisign-signed (fleet shell key `5F4DCA2AABE47146`; Pulse content key `EDFD050668DDB2EB`) and macOS bundles are
   Developer-ID signed + notarized. Source code is **not** in this repo.
 
 Design authority: the Opta Update System foundation design (internal, 2026-06-11).

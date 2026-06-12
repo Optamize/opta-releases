@@ -1,0 +1,23 @@
+{
+  "collection": "whats-new",
+  "docs": [
+    {
+      "id": "opta-hq-0.2.0",
+      "app": "opta-hq",
+      "version": "0.2.0",
+      "title": "Opta HQ becomes self-updating",
+      "highlights": [
+        {
+          "text": "Signed & notarized — HQ is now a Developer-ID app"
+        },
+        {
+          "text": "Silent background updates with a quiet 'Restart to update' pill"
+        },
+        {
+          "text": "Loadout-driven sidebar (Atlas substrate)"
+        }
+      ]
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,521 @@
+{
+  "collection": "atlas",
+  "entries": [
+    {
+      "moduleId": "local",
+      "status": "preview",
+      "featured": true,
+      "order": 1,
+      "requires": {
+        "app": "opta-hq",
+        "semver": ">=0.2.0"
+      },
+      "manifest": {
+        "branding": {
+          "logo": "local-runtime",
+          "hue": 210
+        },
+        "pitch": "Your own AI, running entirely on your Mac.",
+        "description": "One module that unifies what were three separate pages — Local Runtime, Models & Routing, and Usage — as three lenses over the same opta-router endpoints. Watch local inference live, manage which models are resident, and track what your local AI is doing and costing. The three underlying pages are live today; the unified Opta Local module ships with the P2 merge.",
+        "audience": [
+          "Privacy-minded users who want AI on their own hardware",
+          "Anyone running local models on a Mac",
+          "Developers tuning local model routing"
+        ],
+        "useCases": [
+          "Chat with models that never leave your machine",
+          "See which models are loaded and what they cost in memory",
+          "Route requests to the right local model automatically",
+          "Track local usage over time"
+        ],
+        "complexity": "standard",
+        "parts": [
+          {
+            "id": "page",
+            "kind": "page",
+            "label": "Opta Local page (runtime, models, and usage lenses)",
+            "removable": true,
+            "keepOnUninstallByDefault": false
+          },
+          {
+            "id": "opta-router",
+            "kind": "daemon",
+            "label": "Opta Router — local model routing daemon",
+            "removable": true,
+            "keepOnUninstallByDefault": true
+          },
+          {
+            "id": "inference-engine",
+            "kind": "daemon",
+            "label": "Local inference engine",
+            "sizeEstimate": "models can run to several GB",
+            "removable": true,
+            "keepOnUninstallByDefault": true
+          }
+        ],
+        "requirements": [
+          {
+            "id": "opta-router",
+            "label": "Opta Router daemon running on this Mac",
+            "probe": "daemon-socket",
+            "remediation": "wizard"
+          }
+        ]
+      }
+    },
+    {
+      "moduleId": "automations",
+      "status": "preview",
+      "featured": true,
+      "order": 2,
+      "requires": {
+        "app": "opta-hq",
+        "semver": ">=0.2.0"
+      },
+      "manifest": {
+        "branding": {
+          "logo": "automations",
+          "hue": 235
+        },
+        "pitch": "Put Opta on the night shift.",
+        "description": "A registry of time, event, and manual triggers for the work you want Opta to do on its own. The marquee feature is Sleep Schedule: a guided setup that keeps your Mac awake through a chosen overnight window so Opta works while you sleep. The trigger page is live today; the Sleep Schedule wizard and its backend are still being built.",
+        "audience": [
+          "Anyone who wants work finished while they sleep",
+          "Busy people who would rather schedule than babysit",
+          "Power users wiring event-driven workflows"
+        ],
+        "useCases": [
+          "Queue up overnight work with Sleep Schedule",
+          "Run recurring jobs on a timer",
+          "Trigger workflows from events like new files or messages",
+          "Fire any saved automation manually with Run now"
+        ],
+        "complexity": "standard",
+        "parts": [
+          {
+            "id": "page",
+            "kind": "page",
+            "label": "Automations page",
+            "removable": true,
+            "keepOnUninstallByDefault": false
+          },
+          {
+            "id": "sleep-schedule",
+            "kind": "automation",
+            "label": "Sleep Schedule — overnight work window",
+            "removable": true,
+            "keepOnUninstallByDefault": false
+          },
+          {
+            "id": "keep-awake",
+            "kind": "automation",
+            "label": "Keep-awake agent (future — set up by the Sleep Schedule wizard)",
+            "removable": true,
+            "keepOnUninstallByDefault": false
+          }
+        ],
+        "requirements": [
+          {
+            "id": "keep-awake",
+            "label": "Permission to keep this Mac awake overnight",
+            "probe": "os-permission",
+            "remediation": "wizard"
+          }
+        ]
+      }
+    },
+    {
+      "moduleId": "studio",
+      "status": "available",
+      "featured": true,
+      "order": 3,
+      "requires": {
+        "app": "opta-hq",
+        "semver": ">=0.2.0"
+      },
+      "manifest": {
+        "branding": {
+          "logo": "studio",
+          "hue": 330
+        },
+        "pitch": "Run a website-rebuild pipeline — from prospect to won deal.",
+        "description": "A working pipeline for website-rebuild business: per-prospect company details, a diagnosis of what is weak about their current site and why yours wins, an honest critic rating, and funnel status. Today it is a prospect-pipeline CRM seeded from your vault — not a generic website builder.",
+        "audience": [
+          "Freelancers and small agencies selling web work",
+          "Anyone pitching website rebuilds to local businesses"
+        ],
+        "useCases": [
+          "Track every prospect from first contact to won deal",
+          "Diagnose what is wrong with a prospect's current site",
+          "Keep honest critic ratings on your own builds",
+          "See funnel status across the whole pipeline"
+        ],
+        "complexity": "standard",
+        "parts": [
+          {
+            "id": "page",
+            "kind": "page",
+            "label": "Studio page",
+            "removable": true,
+            "keepOnUninstallByDefault": false
+          },
+          {
+            "id": "pipeline-data",
+            "kind": "data",
+            "label": "Prospect pipeline data",
+            "removable": true,
+            "keepOnUninstallByDefault": true
+          }
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "moduleId": "monitoring",
+      "status": "available",
+      "featured": true,
+      "order": 4,
+      "requires": {
+        "app": "opta-hq",
+        "semver": ">=0.2.0"
+      },
+      "manifest": {
+        "branding": {
+          "logo": "monitoring",
+          "hue": 120
+        },
+        "pitch": "Every Opta service at a glance — what's running, what isn't.",
+        "description": "A live roster of every Opta daemon and engine on this machine: what is up, what is degraded, what is down. Honest by design — it shows real probe results, never a fabricated green light.",
+        "audience": [
+          "Anyone running Opta services on this Mac",
+          "Operators who want a truthful status board"
+        ],
+        "useCases": [
+          "Check at a glance that everything Opta is healthy",
+          "Spot a degraded daemon before it bites",
+          "Confirm a restart actually fixed the problem"
+        ],
+        "complexity": "essential",
+        "parts": [
+          {
+            "id": "page",
+            "kind": "page",
+            "label": "System Health page",
+            "removable": true,
+            "keepOnUninstallByDefault": false
+          }
+        ],
+        "requirements": [
+          {
+            "id": "coordinator",
+            "label": "Opta coordinator daemon",
+            "probe": "daemon-socket",
+            "remediation": "wizard"
+          }
+        ]
+      }
+    },
+    {
+      "moduleId": "context",
+      "status": "available",
+      "featured": true,
+      "order": 5,
+      "requires": {
+        "app": "opta-hq",
+        "semver": ">=0.2.0"
+      },
+      "manifest": {
+        "branding": {
+          "logo": "context",
+          "hue": 300
+        },
+        "pitch": "Everything Opta remembers about your projects, in one place.",
+        "description": "Browse what Opta's coordinator remembers across your projects, with kind and project filters and a recency timeline. This is an interim home: Project Memory folds into Brain in a later phase, and your memories carry over when it does.",
+        "audience": [
+          "People working across multiple projects with Opta",
+          "Anyone who wants to see what Opta remembers"
+        ],
+        "useCases": [
+          "Review what Opta learned during recent sessions",
+          "Filter memories by project or kind",
+          "Scan the recency timeline before resuming a project"
+        ],
+        "complexity": "essential",
+        "parts": [
+          {
+            "id": "page",
+            "kind": "page",
+            "label": "Project Memory page",
+            "removable": true,
+            "keepOnUninstallByDefault": false
+          }
+        ],
+        "requirements": [
+          {
+            "id": "coordinator",
+            "label": "Opta coordinator daemon",
+            "probe": "daemon-socket",
+            "remediation": "wizard"
+          }
+        ]
+      }
+    },
+    {
+      "moduleId": "mct",
+      "status": "available",
+      "featured": false,
+      "order": 6,
+      "requires": {
+        "app": "opta-hq",
+        "semver": ">=0.2.0"
+      },
+      "manifest": {
+        "branding": {
+          "logo": "cockpit",
+          "hue": 20
+        },
+        "pitch": "Mission control for every Opta session, agent, and deployment.",
+        "description": "The Mission Control Tower: live sessions, agents, governance, and deployments in one power surface. Governance and Deployments are becoming tabs here rather than separate pages, so the whole operational picture lives in one cockpit.",
+        "audience": [
+          "Power users running many sessions and agents",
+          "Operators governing an Opta fleet"
+        ],
+        "useCases": [
+          "Watch every live session and agent in one tower",
+          "Review governance posture without leaving the cockpit",
+          "Track deployments alongside the sessions that produced them"
+        ],
+        "complexity": "power",
+        "parts": [
+          {
+            "id": "page",
+            "kind": "page",
+            "label": "MCT page (with Governance and Deployments tabs)",
+            "removable": true,
+            "keepOnUninstallByDefault": false
+          }
+        ],
+        "requirements": [
+          {
+            "id": "coordinator",
+            "label": "Opta coordinator daemon",
+            "probe": "daemon-socket",
+            "remediation": "wizard"
+          }
+        ]
+      }
+    },
+    {
+      "moduleId": "ceo",
+      "status": "available",
+      "featured": false,
+      "order": 7,
+      "requires": {
+        "app": "opta-hq",
+        "semver": ">=0.2.0"
+      },
+      "manifest": {
+        "branding": {
+          "logo": "ceo",
+          "hue": 48
+        },
+        "pitch": "Delegate to Opta at executive altitude.",
+        "description": "An executive-level view for handing Opta real directives and reviewing what came back, instead of managing task by task. The backend is being actively enriched, so expect this surface to deepen quickly.",
+        "audience": [
+          "Owner-operators delegating real work to Opta",
+          "Power users who think in outcomes, not tasks"
+        ],
+        "useCases": [
+          "Hand Opta a directive and review the results",
+          "Keep an executive scoreboard of what's in motion",
+          "Catch decisions that need a human before they ship"
+        ],
+        "complexity": "power",
+        "parts": [
+          {
+            "id": "page",
+            "kind": "page",
+            "label": "CEO Mode page",
+            "removable": true,
+            "keepOnUninstallByDefault": false
+          }
+        ],
+        "requirements": [
+          {
+            "id": "coordinator",
+            "label": "Opta coordinator daemon",
+            "probe": "daemon-socket",
+            "remediation": "wizard"
+          }
+        ]
+      }
+    },
+    {
+      "moduleId": "bedrock",
+      "status": "available",
+      "featured": false,
+      "order": 8,
+      "requires": {
+        "app": "opta-hq",
+        "semver": ">=0.2.0"
+      },
+      "manifest": {
+        "branding": {
+          "logo": "bedrock",
+          "hue": 80
+        },
+        "pitch": "A practical workbench for your foundational files.",
+        "description": "A markdown workbench for the foundational documents that define how your Opta behaves — read, edit, and preview them in one place. Deliberately simple and practical rather than clever.",
+        "audience": [
+          "Power users maintaining their foundational documents",
+          "Anyone who tunes how their Opta behaves"
+        ],
+        "useCases": [
+          "Edit foundational markdown with a live preview",
+          "Keep doctrine and configuration files tidy",
+          "Review a file before letting agents act on it"
+        ],
+        "complexity": "power",
+        "parts": [
+          {
+            "id": "page",
+            "kind": "page",
+            "label": "Bedrock workbench page",
+            "removable": true,
+            "keepOnUninstallByDefault": false
+          }
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "moduleId": "business-ops",
+      "status": "available",
+      "featured": false,
+      "order": 9,
+      "requires": {
+        "app": "opta-hq",
+        "semver": ">=0.2.0"
+      },
+      "manifest": {
+        "branding": {
+          "logo": "business-ops",
+          "hue": 145
+        },
+        "pitch": "Your plays, portfolio, and pricing in one operating view.",
+        "description": "The business side of running work with Opta: the portfolio of active plays and the pricing that goes with them. Deliberately separate from Studio — this is strategy and money, not the build pipeline.",
+        "audience": [
+          "Owner-operators running Opta as a business",
+          "Anyone managing plays, portfolio, and pricing"
+        ],
+        "useCases": [
+          "Keep the portfolio of active plays in one view",
+          "Reference pricing when scoping a new deal",
+          "Keep business strategy separate from the build pipeline"
+        ],
+        "complexity": "power",
+        "parts": [
+          {
+            "id": "page",
+            "kind": "page",
+            "label": "Business page",
+            "removable": true,
+            "keepOnUninstallByDefault": false
+          }
+        ],
+        "requirements": []
+      }
+    },
+    {
+      "moduleId": "research",
+      "status": "available",
+      "featured": false,
+      "order": 10,
+      "requires": {
+        "app": "opta-hq",
+        "semver": ">=0.2.0"
+      },
+      "manifest": {
+        "branding": {
+          "logo": "research",
+          "hue": 175
+        },
+        "pitch": "Deep research runs on your always-on Opta server.",
+        "description": "Long-running, multi-step research jobs executed on a dedicated always-on Opta server machine — not your laptop. If no server machine is reachable, the card stays honestly gated: this module cannot run without one.",
+        "audience": [
+          "Households or teams with a dedicated Opta server machine",
+          "Researchers who want long jobs off their everyday Mac"
+        ],
+        "useCases": [
+          "Run deep multi-step research jobs overnight on the server",
+          "Keep heavy workloads off the machine in front of you",
+          "Pick up finished research from any machine"
+        ],
+        "complexity": "power",
+        "parts": [
+          {
+            "id": "page",
+            "kind": "page",
+            "label": "Mono research page",
+            "removable": true,
+            "keepOnUninstallByDefault": false
+          }
+        ],
+        "requirements": [
+          {
+            "id": "server-machine",
+            "label": "Requires an Opta server machine",
+            "probe": "tcp",
+            "remediation": "blocking"
+          }
+        ]
+      }
+    },
+    {
+      "moduleId": "validation",
+      "status": "available",
+      "featured": false,
+      "order": 11,
+      "requires": {
+        "app": "opta-hq",
+        "semver": ">=0.2.0"
+      },
+      "manifest": {
+        "branding": {
+          "logo": "validation",
+          "hue": 355
+        },
+        "pitch": "A relentless critic reviewing Opta's work before you have to.",
+        "description": "A stream of critiques from Amelio, Opta's critical analyst, reviewing work before it ships. The backend is in active development; when the engine is unavailable the page degrades honestly rather than showing fabricated results.",
+        "audience": [
+          "Anyone who wants their work checked before it ships",
+          "Power users running continuous critique"
+        ],
+        "useCases": [
+          "Read Amelio's critiques as a stream",
+          "Catch regressions and weak spots early",
+          "Hold Opta's own output to a high bar"
+        ],
+        "complexity": "power",
+        "parts": [
+          {
+            "id": "page",
+            "kind": "page",
+            "label": "Amelio critiques page",
+            "removable": true,
+            "keepOnUninstallByDefault": false
+          }
+        ],
+        "requirements": [
+          {
+            "id": "amelio",
+            "label": "Amelio critique engine",
+            "probe": "daemon-socket",
+            "remediation": "wizard"
+          }
+        ]
+      }
+    }
+  ],
+  "version": 1
+}

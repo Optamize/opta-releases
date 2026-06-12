@@ -1,0 +1,11 @@
+{
+  "collection": "stack",
+  "contract": {
+    "releasesRepo": "Optamize/opta-releases",
+    "updateEndpoints": [
+      "https://updates.optastack.ai/v1",
+      "https://raw.githubusercontent.com/Optamize/opta-releases/main/public/v1"
+    ]
+  },
+  "version": 1
+}

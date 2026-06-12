@@ -1,0 +1,18 @@
+{
+  "schema": "opta.release-meta/1",
+  "app": "opta-hq",
+  "version": "0.2.1",
+  "channel": "beta",
+  "class": "hotfix",
+  "urgent": false,
+  "pubDate": "2026-06-11T08:38:14Z",
+  "title": "OTA loop proof",
+  "highlights": [
+    {
+      "text": "First over-the-air update in Opta history \u2014 the loop is live"
+    }
+  ],
+  "notesMarkdown": "Hotfix-class release proving the update pipeline end-to-end.",
+  "modules": [],
+  "minimumVersion": null
+}

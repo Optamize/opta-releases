@@ -1,0 +1,11 @@
+{
+  "version": "0.2.1",
+  "notes": "Hotfix: update-system reliability proof. Installs silently; restart whenever suits you.",
+  "pub_date": "2026-06-11T08:38:14Z",
+  "platforms": {
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSR2NlU3JLc3BOWHpocG1hd2FrVjZTMHExRVJkbVpZQTV2S3lYQWM1dXRpclhzcHp3VDVuUlBkekhJNzR0YU04R2Fwdy9jazJuQ0JtYXdQdVphdGhmUTFFaXU0K3BBVmdNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxMTY3MDYwCWZpbGU6T3B0YSBIUS5hcHAudGFyLmd6Ck9ybEJJKzYvUWJ0RXNXSWowL2VhakVvTVVGOXhXSGhaeXo4U3VRMlBNWC9VckJpVzVhK3R4cFR4ZGpTeTMrMHlINmhvWUFkVi92OUxmNEFZL01FSEF3PT0K",
+      "url": "https://github.com/Optamize/opta-releases/releases/download/opta-hq-v0.2.1/Opta-HQ-0.2.1-aarch64.app.tar.gz"
+    }
+  }
+}

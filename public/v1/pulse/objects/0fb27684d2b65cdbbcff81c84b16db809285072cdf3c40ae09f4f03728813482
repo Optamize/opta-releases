@@ -1,0 +1,12 @@
+{
+  "collection": "status",
+  "entries": [
+    {
+      "id": "u2-launch",
+      "at": "2026-06-12T00:00:00Z",
+      "severity": "info",
+      "text": "Opta Update System content plane (Pulse) is live."
+    }
+  ],
+  "version": 1
+}

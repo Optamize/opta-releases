@@ -1,0 +1,38 @@
+{
+  "schema": "opta.pulse-snapshot/1",
+  "snapshotId": "bf2f44f9-8849-47de-a7a6-27af2b025b05",
+  "createdAt": "2026-06-11T14:44:48.991Z",
+  "channel": "stable",
+  "collections": {
+    "atlas": {
+      "version": 1,
+      "sha256": "751891c867f89825528208e5fe0a7e282dba442a6a00ae6a1696356810de0c0e",
+      "url": "/v1/pulse/objects/751891c867f89825528208e5fe0a7e282dba442a6a00ae6a1696356810de0c0e"
+    },
+    "config": {
+      "version": 1,
+      "sha256": "ab58c93733e58b9f62c32aa521565ae1aca79c5a88bcd59c0c73082d9f1cb089",
+      "url": "/v1/pulse/objects/ab58c93733e58b9f62c32aa521565ae1aca79c5a88bcd59c0c73082d9f1cb089"
+    },
+    "status": {
+      "version": 1,
+      "sha256": "0fb27684d2b65cdbbcff81c84b16db809285072cdf3c40ae09f4f03728813482",
+      "url": "/v1/pulse/objects/0fb27684d2b65cdbbcff81c84b16db809285072cdf3c40ae09f4f03728813482"
+    },
+    "learn": {
+      "version": 1,
+      "sha256": "676f80659499d4cb7a7b4e0b966c29e6b56089614bbe64fb163dbab3e1256d28",
+      "url": "/v1/pulse/objects/676f80659499d4cb7a7b4e0b966c29e6b56089614bbe64fb163dbab3e1256d28"
+    },
+    "whats-new": {
+      "version": 1,
+      "sha256": "d42b38eae66923982d304e50217f681a10ad4baa08a915f62e54fecab4b913f0",
+      "url": "/v1/pulse/objects/d42b38eae66923982d304e50217f681a10ad4baa08a915f62e54fecab4b913f0"
+    },
+    "stack": {
+      "version": 1,
+      "sha256": "6cbeb4c64dca87c59ba14cb0b238cbfa63708e2c05eb16c739e54a0f382d0615",
+      "url": "/v1/pulse/objects/6cbeb4c64dca87c59ba14cb0b238cbfa63708e2c05eb16c739e54a0f382d0615"
+    }
+  }
+}

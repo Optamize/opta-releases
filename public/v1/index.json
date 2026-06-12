@@ -3,7 +3,8 @@
   "apps": {
     "opta-hq": {
       "channels": {
-        "stable": "0.2.1"
+        "stable": "0.2.1",
+        "beta": "0.2.1"
       },
       "updated": "2026-06-11T08:38:14Z"
     }
